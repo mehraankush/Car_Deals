@@ -15,15 +15,15 @@ const Navbar = () => {
       </Link>
       {
         session?( 
-          <div className='flex gap-4 ml-auto font-extrabold text-white'>
+          <div className='flex gap-4 ml-auto text-white'>
             <div className="w-10 h-10 rounded-full overflow-hidden">
                 <Image src={`${session?.user?.image}`} alt="Logo" width={30} height={30} className="object-contain w-full h-full "/>
             </div>
-              <CustomButton title="SIgn Out" btnType="button" handleClick={()=>signOut()} containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"/>
+              <CustomButton title="SIgn Out" btnType="button" handleClick={()=>signOut()} containerStyles="text-primary-blue shadow rounded-full bg-white min-w-[130px]"/>
           </div>
       ):( 
 
-        <CustomButton title="SIgn In" btnType="button" handleClick={()=>signIn('google')} containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"/>
+        <CustomButton title="SIgn In" btnType="button" handleClick={()=>signIn('google')} containerStyles="text-primary-blue rounded-full bg-white min-w-[130px] shadow"/>
       )}
      
     </nav>
